@@ -10,16 +10,6 @@ This redemption can occur in two manners:
 
 - _Mature_: After a bond is "mature", the current value of the underlying collateral is distributed to holding pools for the tranche holders. This locks in the distribution rates - any further changes to the value of the underlying collateral will not affect the value that holders receive. In this state, users can redeem any of their tranche tokens for the respective slice of the holding pool, using the `redeemMature(address token, uint256 amount)` function on the `BondController` instance.
 - _Immature_: When a bond is not yet mature, users can still redeem their tranche tokens - with some restrictions. In order to maintain the value distribution for all other holders, any user who wishes to redeem from an immature bond must do so with _all_ of the tranche tokens at once, in the _original tranche ratio_.
-
-The diagram below depicts the process of depositing a rebasing asset (AMPL in this case), in return for a set of tranche tokens.
-![Deposit](/assets/tranche_diagram.png)
-
-The diagram below depicts the process of redeeming tranche tokens in a mature bond
-![Mature Redemption](/assets/mature_redemption.png)
-
-The diagram below depicts the process of redeeming tranche tokens in an immature bond
-![Immature Redemption](/assets/immature_redemption.png)
-
 ## Usage
 
 ### Pre Requisites
